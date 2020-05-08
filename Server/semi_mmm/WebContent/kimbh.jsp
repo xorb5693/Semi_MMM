@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>배고프다</h2>
+	<h1>김병호</h1>
 </body>
 </html>
