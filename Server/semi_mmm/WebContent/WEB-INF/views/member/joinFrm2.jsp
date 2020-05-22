@@ -26,6 +26,7 @@ margin: 5px;
 <script>
 	var pwchk = "";
 	var joinOk = 0;
+	var pwchk2 = "";
 	$(function() {
 		$(".form-control").blur(function() {
 			if ($(this).val() == "") {
@@ -71,6 +72,10 @@ margin: 5px;
 			} else {
 				pwchk = val;
 				what.css("border", "3px solid #76D5FF");
+				if (pwchk2 != val) {
+					$("#pwchk").css("border", "3px solid red");
+					joinOk--;
+				}
 			}
 		}
 		if (what.attr("id") == "pwchk") {
@@ -82,7 +87,7 @@ margin: 5px;
 				what.css("border", "3px solid #76D5FF");
 				$("#checkPw").prop("type","hidden");
 				joinOk++;
-				
+				pwchk2 = val;
 			}
 		}
 		if (what.attr("id") == "name") {
