@@ -59,17 +59,19 @@ public class UpdateMemberServlet extends HttpServlet {
 		} else {
 			m.setProfileImg(mRequest.getParameter("memberOriginImg"));
 		}
-		HttpSession session = request.getSession(false);
-		if(level == 1) {
-			session.setAttribute("member", m);
-		} else if(level == 2) {
-			session.setAttribute("shop", m);
-		}
-	
 		
 		int result = new MemberService().updateMember(m);
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/common/msg.jsp");
 		if(result > 0) {
+			Member member = new MemberService().selectOneMember(memberId);
+			
+			HttpSession session = request.getSession(false);
+			if(level == 1 || level == 0) {
+				session.setAttribute("member", member);
+			} else if(level == 2) {
+				session.setAttribute("shop", member);
+			}
+		
 			request.setAttribute("msg", "정보 수정 되었습니다");
 			request.setAttribute("loc", "/");
 		} else {

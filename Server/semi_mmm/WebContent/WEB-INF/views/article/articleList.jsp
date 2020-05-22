@@ -31,6 +31,8 @@
         }
 
         .articleList {
+        	margin: 0 auto;
+        	width: 95%;
             margin-bottom: 50px;
             overflow: hidden;
             padding: 0;
@@ -92,8 +94,10 @@
         
         .moreBtn {
             border: 1px solid #76D5FF;
+            background-color: white;
             height: 30px;
             font-weight: bold;
+            border-radius: 10px;
         }
         
         .moreBtn:hover {
@@ -200,7 +204,11 @@
                             var div = $("<div onclick = readArticle(" + data[i]["articleNoticeNo"] + ");>");
                             
                             var img = $("<div class='imgBox'></div>");
-                            img.css("background-image", "url(" + data[i]['articleNoticeImgName'] + ")");
+                            if (data[i]['articleNoticeImgName'] == null) {
+                                img.css("background-image", "url(/img/noimage.gif)");
+                            } else {
+                                img.css("background-image", "url(" + data[i]['articleNoticeImgName'] + ")");
+                            }
                             div.append($(img));
                             
                             div.append($("<p>" + data[i]["articleNoticeCategory1"] + " > " + data[i]["articleNoticeCategory2"] + "</p>"));
@@ -215,8 +223,8 @@
                         $("#more").attr("currentCount", Number($("#more").attr("currentCount")) + data.length);
                         var totalCount = $("#more").attr("totalCount");
                         var currentCount = $("#more").attr("currentCount");
-                        console.log(totalCount);
-                        console.log(currentCount);
+                        //console.log(totalCount);
+                        //console.log(currentCount);
 
                         if (totalCount == currentCount) {
                             $("#more").attr("disabled", true);
@@ -247,11 +255,15 @@
                         var div = $("<div onclick = readArticle(" + data[i]["articleNoticeNo"] + ");>");
                         
                         var img = $("<div class='imgBox'></div>");
-                        img.css("background-image", "url(" + data[i]['articleNoticeImgName'] + ")");
+                        if (data[i]['articleNoticeImgName'] == null) {
+                            img.css("background-image", "url(/img/noimage.gif)");
+                        } else {
+                            img.css("background-image", "url(" + data[i]['articleNoticeImgName'] + ")");
+                        }
                         div.append($(img));
                         
                         div.append($("<p>" + data[i]["articleNoticeCategory1"] + " > " + data[i]["articleNoticeCategory2"] + "</p>"));
-                        div.append($("<p class='title'>" + data[i]["articleNoticeTitle"] + "</p>"));
+                        div.append($("<p class='title' style='height: 20px; width: 200px; overflow: hidden; text-overflow: eclipsis;'>" + data[i]["articleNoticeTitle"] + "</p>"));
                         div.append($("<p>작성자 : " + data[i]["articleNoticeWriter"] + "</p>"));
                         if (data[i]["articleNoticeSoldBool"] == 0) {
                             div.append("<p>구매여부 : 구매 가능</p>");
@@ -267,8 +279,8 @@
                     $("#more").attr("currentCount", Number($("#more").attr("currentCount")) + data.length);
                     var totalCount = $("#more").attr("totalCount");
                     var currentCount = $("#more").attr("currentCount");
-                    console.log(totalCount);
-                    console.log(currentCount);
+                    //console.log(totalCount);
+                    //console.log(currentCount);
 
                     if (totalCount == currentCount) {
                         $("#more").attr("disabled", true);

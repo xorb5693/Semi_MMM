@@ -9691,8 +9691,24 @@ html, body {
 	line-height: 50px;
 }
 
+.list_table td {
+	height: 50px;
+}
+
 .list_table a {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+	text-decoration: none;
+	display: inline-block;
+	height: 50px;
+	width100%;
+	overflow: hidden;
+	white-space: nowrap
+	text-overflow: eclipsis;
+}
+
+.list_table a {
+	overflow: hidden;
+	text-overflow: eclipsis;
 }
 
 .article_notice tr>*:frist-child, .article_notice tr>*:last-child {
@@ -9730,7 +9746,9 @@ html, body {
 
 .pageNavi>* {
 	display: inline-block;
-	width: 24px;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
 }
 
 .pageNavi>span {

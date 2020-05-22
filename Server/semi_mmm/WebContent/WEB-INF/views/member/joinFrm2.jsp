@@ -181,7 +181,7 @@ margin: 5px;
 	 function addrSearch() {
 			new daum.Postcode({
 				oncomplete : function(data) {
-					$("#postCode").val(data.zoneCode);
+					$("#postCode").val(data.zonecode);
 					$("#roadAddr").val(data.roadAddress);
 					$("#jibunAddr").val(data.jibunAddress);
 				}
