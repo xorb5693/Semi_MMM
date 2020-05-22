@@ -194,7 +194,7 @@
 		<div class="comment">
 			<h4>
 				댓글: ${fn:length(list)}개
-				<button class="btn btn-info" id="list">목록으로</button>
+				<button class="btn btn-primary" id="list">목록으로</button>
 			</h4>
 			<br>
 			<br>
@@ -229,7 +229,7 @@
                                         </c:if>
                                     </td>
                                     <td style="width: 33%;">
-                                        <c:if test="${comment.comment.articleCommentWriter == sessionScope.member.memberId and comment3.comment.articleCommentRef == comment2.comment.articleCommentNo }">
+                                        <c:if test="${comment.comment.articleCommentWriter == sessionScope.member.memberId and comment.comment.articleCommentDeleteBool == 0 }">
                                             <a href="javascript:void(0)" onclick="deleteComment(this);">삭제</a>
                                         </c:if>
                                     </td>

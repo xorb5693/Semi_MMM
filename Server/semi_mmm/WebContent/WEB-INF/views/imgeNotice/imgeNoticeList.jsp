@@ -72,8 +72,9 @@
 						<c:choose>
         <c:when test="${n.noticeImgs eq n.noticeImgs }">
 					<div style="width: 33%; height: 400px; display: inline-block; margin-bottom: 2%;">
-					<a href="/noticeView?noticeNo=${n.noticeNo }&memberId=${n.noticeWriter }"><img src="${n.noticeImgs}" class="rounded" alt="Cinque Terre" style="width: 100%; height: 100%;">
+					<a href="/noticeView?noticeNo=${n.noticeNo }&memberId=${n.noticeWriter }">
 					
+					<img src="${n.noticeImgs}" class="rounded" alt="Cinque Terre" style="width: 100%; height: 100%;">
 					</a>
 					<div style="border: 1px solid black;">
 					<div style=" margin: 0 auto; text-align: center; overflow:hidden; width:350px; text-overflow: ellipsis; white-space:nowrap;  font-weight: bold;">${n.noticeTitle }</div>
@@ -89,7 +90,7 @@
 		<div id="pageNavi" style=" margin-top: 3%;">${pageNavi }</div>
 		
 
-	
+	<!-- 
 		<table style="margin: 0 auto; margin-bottom: 2%; margin-top: 2%">
 		<tr>
 		  <td style="width: 20%; text-align: center;">
@@ -103,13 +104,13 @@
 		  <td style="width: 60%;"><input type="text" style="width: 100%;"></td>
 		  
 		   <td style="width: 20%;">
-		   <form action="/noticeWriteFrm" method="post">
+		    <form action="/noticeWriteFrm" method="post">
 		  	<button id="logining" class="btn btn-lg btn-primary btn-block" style=" width:100px; height: 30px; line-height: 40%; display: inline-block; margin-left: 10%; font-size: 20px;" type="submit">검색</button>
-		  </form>
+		  </form> 
 		  </td>
 		  
 		</tr>
-		</table>
+		</table> -->
 	</div>
 		
 	<jsp:include page="/WEB-INF/views/common/footer.jsp" />

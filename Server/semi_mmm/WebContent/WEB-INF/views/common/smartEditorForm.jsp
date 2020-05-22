@@ -56,12 +56,12 @@
    
 
 
-<table width="100%">
+<table width="1350px;" style="margin: 0 auto;">
 
         <tr>
             <td>
               
-              <textarea rows="10" cols="30" id="ir1" name="content" style="width:100%; height:600px;">
+              <textarea rows="10" cols="30" id="ir1" name="content"  style="width:1300px; height:600px; margin: 0 auto;">
               
 			<c:forEach items="${sessionScope.dog }" var="d">
 		<table style=" margin: 0 auto; margin-bottom: 2%; margin-top: 5%; border: 1px solid #B6EAFA; border-radius: 20px;">
@@ -111,7 +111,7 @@ var oEditors = [];
 nhn.husky.EZCreator.createInIFrame({
 	oAppRef: oEditors,
 	elPlaceHolder: "ir1",
-	sSkinURI: "sm/SmartEditor2Skin.html",	
+	sSkinURI: "sm/SmartEditor2Skin2.html",	
 	htParams : {
 		bUseToolbar : true,				// 툴바 사용 여부 (true:사용/ false:사용하지 않음)
 		bUseVerticalResizer : true,		// 입력창 크기 조절바 사용 여부 (true:사용/ false:사용하지 않음)
