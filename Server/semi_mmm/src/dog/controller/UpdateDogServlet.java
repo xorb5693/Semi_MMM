@@ -35,7 +35,7 @@ public class UpdateDogServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String root = request.getSession().getServletContext().getRealPath("/");
-		String saveDirectory = root+"upload/memberImg";
+		String saveDirectory = root+"upload/dogImg";
 		int maxSize = 10*1024*1024;
 		MultipartRequest mRequest = new MultipartRequest(request, saveDirectory, maxSize, "UTF-8", new DefaultFileRenamePolicy());
 		String dogId = mRequest.getParameter("dogId");

@@ -17,7 +17,7 @@
 <meta name="description" content="" />
 <meta name="author" content="" />
 <title>Adimn - 자랑게시판 댓글 관리 페이지</title>
-<link href="/admin/css/tg_styles.css" rel="stylesheet" />
+<link href="/admin/css/tg_styles.css?after" rel="stylesheet" />
 <link
 	href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css"
 	rel="stylesheet" crossorigin="anonymous" />

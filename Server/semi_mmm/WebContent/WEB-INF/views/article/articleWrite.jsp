@@ -68,13 +68,13 @@ input[type="button"] {
 			<table>
 				<tr>
 					<th>카테고리 선택 :</th>
-					<th><select name="articleNoticeCategory1" style="margin-top: 10px;	margin-bottom: 20px;" size="4" required>
-							<option value="대형견">대형견</option>
+					<th><select name="articleNoticeCategory1" style="margin-top: 10px;	margin-bottom: 20px;" size="4" >
+							<option value="대형견" selected>대형견</option>
 							<option value="중형견">중형견</option>
 							<option value="소형견">소형견</option>
 					</select></th>
-					<th><select name="articleNoticeCategory2" style="margin-top: 10px;	margin-bottom: 20px;" size="4" required>
-							<option value="식품">식품</option>
+					<th><select name="articleNoticeCategory2" style="margin-top: 10px;	margin-bottom: 20px;" size="4" >
+							<option value="식품" selected>식품</option>
 							<option value="장난감">장난감</option>
 							<option value="의상">의상</option>
 							<option value="가구">가구</option>
