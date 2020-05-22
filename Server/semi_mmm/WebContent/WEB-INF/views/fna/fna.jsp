@@ -37,40 +37,8 @@
 				</c:forEach>
 
 			</table>
-			<!--  	<h2>F&A 게시판</h2>
-			<div id="accordion">
-				<div class="card">
-					<div class="card-header">
-						<a class="card-link" data-toggle="collapse"
-							data-parent="#accordion" href="#collapseOne"> item#1 </a>
-					</div>
-					<div id="collapseOne" class="collapse show">
-						<div class="card-body">안녕? 잘있징?</div>
-					</div>
-				</div>
-				<div class="card">
-					<div class="card-header">
-						<a class="collapsed card-link" data-toggle="collapse"
-							data-parent="#accordion" href="#collapseTwo"> item#2 </a>
-					</div>
-					<div id="collapseTwo" class="collapse">
-						<div class="card-body">내일은 햇님:)
-						</div>
-					</div>
-				</div>
 			
-			<div class="card">
-				<div class="card-header">
-					<a class="collapsed card-link" data-toggle="collapse"
-						data-parent="#accordion" href="#collapseThree"> item#3 </a>
-				</div>
-				<div id="collapseThree" class="collapse">
-					<div class="card-body">술마시고 싶다
-					</div>
-				</div>
-			</div>
-
-		</div>-->
 		</div>
+		
 </body>
 </html>
